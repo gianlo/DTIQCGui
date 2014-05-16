@@ -620,7 +620,7 @@ class DtiQAGui(QtGui.QWidget):
             cwd = os.path.abspath(os.path.curdir)
             self.set_app_path(cwd)
             
-        ret = QtGui.QFileDialog.getOpenFileName(self, tr('Load FSL b-vals file'), cwd, filter=tr("bvals files (*.bvals*);; All files (*.*)"))
+        ret = QtGui.QFileDialog.getOpenFileName(self, tr('Load FSL b-vals file'), cwd, filter=tr("bvals files (*.bvals* *bvals*);; All files (*.* *)"))
         if ret:
             self.set_app_path(os.path.dirname(unicode(ret)))
             self.set_bvals(ret)
@@ -632,7 +632,7 @@ class DtiQAGui(QtGui.QWidget):
             cwd = os.path.abspath(os.path.curdir)
             self.set_app_path(cwd)
             
-        ret = QtGui.QFileDialog.getOpenFileName(self, tr('Load FSL b-vecs file'), cwd, filter=tr("bvecs files (*.bvecs*);; All files (*.*)"))
+        ret = QtGui.QFileDialog.getOpenFileName(self, tr('Load FSL b-vecs file'), cwd, filter=tr("bvecs files (*.bvecs* *bvecs*);; All files (*.* *)"))
         if ret:
             self.set_app_path(os.path.dirname(unicode(ret)))
             self.set_bvecs(ret)
